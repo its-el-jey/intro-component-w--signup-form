@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+// variables
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+// base 
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  background: $red url(/images/bg-intro-mobile.png) no-repeat;
+  background-size: cover;
+}
+//layout
+.bd-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 5rem 2rem;
+}
+
+// main
+.main{
+  text-align: center;
+  row-gap: 3rem;
+
+  .content {
+    color: white;
+    
+  }
+  .signup {
+    .btn-try {
+      background: $blue;
+      border: none;
+      width: 100%;
+      padding: 1rem 3rem;
+      color: white;
+      font-weight: 300;
+      border-radius: 0.5rem;
+      box-shadow: 0px 5px 0px 0px hsl(0, 56%, 61%);
+
+      span {
+        font-weight: 600;
+      }
+    }
+    #submit-form {
+      display: block;
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0px 7px 2px 0px hsl(0, 56%, 61%);
+
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          border: 1px solid $grayish-blue;
+          border-radius: 0.25rem;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          font-weight: 700;
+          font-family: 'Poppins';
+        }
+        
+        .error-icon {
+          position: absolute;
+          right: 1rem;
+          bottom: 2rem;
+          visibility: hidden;
+        }
+      }
+      .input-error {
+        input {
+          border: 2px solid $red;
+        }
+        .error-icon {
+          visibility: visible;
+        }
+      }
+      .input-success {
+        input {
+          border: 2px solid $green;
+        }
+        .error-icon {
+          visibility: hidden;
+        }
+      }
+      .error {
+        text-align: right;
+        margin-top: -0.6rem;
+        color: $red;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .btn-claim {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        background: $green;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        box-shadow: 0px 5px 0px 0px  hsl(154, 59%, 45%);
+        cursor: pointer;
+        &:active{
+          transform: translate(0px, 5px);
+          box-shadow: 0px 1px 0px 0px;
+          border: none;
+        }
+      }
+      .message {
+        font-weight: 400;
+        font-size: 12px;
+        color: $grayish-blue;
+        span {
+          color: $red;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+// media query
+
+@media screen and (min-width: 768px) {
+  body{
+    margin: 0;
+    background: $red url(/images/bg-intro-desktop.png) no-repeat;
+  }
+  .bd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    max-width: 1024px;
+  }
+  .main {
+    column-gap: 2rem;
+    .content {
+      display: grid;
+      align-items: center;
+      text-align: left;
+      
+      h1 {
+        width: 100%;
+        margin: 0;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .bd-grid {
+    margin: 0 auto;
+  }
+}

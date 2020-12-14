@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  background: #ff7a7a url(/images/bg-intro-mobile.png) no-repeat;
+  background-size: cover;
+}
+
+.bd-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  padding: 5rem 2rem;
+}
+
+.main {
+  text-align: center;
+  row-gap: 3rem;
+}
+
+.main .content {
+  color: white;
+}
+
+.main .signup .btn-try {
+  background: #6055a5;
+  border: none;
+  width: 100%;
+  padding: 1rem 3rem;
+  color: white;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 5px 0px 0px #d36464;
+          box-shadow: 0px 5px 0px 0px #d36464;
+}
+
+.main .signup .btn-try span {
+  font-weight: 600;
+}
+
+.main .signup #submit-form {
+  display: block;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 7px 2px 0px #d36464;
+          box-shadow: 0px 7px 2px 0px #d36464;
+}
+
+.main .signup #submit-form .input {
+  position: relative;
+}
+
+.main .signup #submit-form .input input {
+  width: 100%;
+  border: 1px solid #b9b6d3;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: 'Poppins';
+}
+
+.main .signup #submit-form .input .error-icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  visibility: hidden;
+}
+
+.main .signup #submit-form .input-error input {
+  border: 2px solid #ff7a7a;
+}
+
+.main .signup #submit-form .input-error .error-icon {
+  visibility: visible;
+}
+
+.main .signup #submit-form .input-success input {
+  border: 2px solid #38cc8c;
+}
+
+.main .signup #submit-form .input-success .error-icon {
+  visibility: hidden;
+}
+
+.main .signup #submit-form .error {
+  text-align: right;
+  margin-top: -0.6rem;
+  color: #ff7a7a;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.main .signup #submit-form .btn-claim {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background: #38cc8c;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  -webkit-box-shadow: 0px 5px 0px 0px #2fb67c;
+          box-shadow: 0px 5px 0px 0px #2fb67c;
+  cursor: pointer;
+}
+
+.main .signup #submit-form .btn-claim:active {
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  -webkit-box-shadow: 0px 1px 0px 0px;
+          box-shadow: 0px 1px 0px 0px;
+  border: none;
+}
+
+.main .signup #submit-form .message {
+  font-weight: 400;
+  font-size: 12px;
+  color: #b9b6d3;
+}
+
+.main .signup #submit-form .message span {
+  color: #ff7a7a;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    background: #ff7a7a url(/images/bg-intro-desktop.png) no-repeat;
+  }
+  .bd-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1.2fr;
+    max-width: 1024px;
+  }
+  .main {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+  .main .content {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .main .content h1 {
+    width: 100%;
+    margin: 0;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

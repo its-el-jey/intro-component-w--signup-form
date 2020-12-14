@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/sass/style.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -15,28 +16,61 @@
   </style>
 </head>
 <body>
+  <section class="main bd-grid">
+    <div class="content">
+      <div>
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
+      
+    </div>
+    <div class="signup">
+        <p class="btn-try">
+          <span>Try it free 7 days</span> then
+          $20/mo. thereafter
+        </p>
+      <form id="submit-form">
+          <div class="fname input">
+            <input type="text" placeholder="First Name" id="fname" />
+            <img class="error-icon" src="/images/icon-error.svg" alt="error">
+            <p class="error"></p>
+          </div>
+          
+          <div class="lname input">
+            <input type="text" placeholder="Last Name " id="lname" />
+            <img class="error-icon" src="/images/icon-error.svg" alt="error">
+            <p class="error"></p>
+          </div>
+          
+          <div class="email input">
+            <input type="text" placeholder="Email Address" id="email" />
+            <img class="error-icon" src="/images/icon-error.svg" alt="error">
+            <p class="error"></p>
+          </div>
+          
+          <div class="password input">
+            <input type="password" placeholder="Password" id="password" />
+            <img class="error-icon" src="/images/icon-error.svg" alt="error">
+            <p class="error"></p>
+          </div>
+          
 
-  Learn to code by watching others
+          <button class="btn-claim">Claim your free trial</button>
+          <p class="message">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+        </form>
+    </div>
+  </section>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/its-el-jey" target="_blank">LJ Anfone</a>.
     </p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
